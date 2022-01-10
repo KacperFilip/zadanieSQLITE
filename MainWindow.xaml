@@ -1,0 +1,73 @@
+﻿<Window x:Class="bazyZad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bazyZad"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="tw_baze" Grid.Column="0" Grid.Row="0" Content="Utwórz bazę" Width="200" Height="60"
+                FontSize="20" Click="tw_baze_Click"/>
+
+        <Button x:Name="tw_tabele" Grid.Column="0" Grid.Row="1" Content="Utwórz tabelę" Width="200" Height="60"
+                FontSize="20" Click="tw_tabele_Click"/>
+
+        <Label Grid.Column="0" Grid.Row="2" Content="Przedmiot"
+               FontSize="20" HorizontalAlignment="Center"/>
+        <TextBox x:Name="przedmiot" Grid.Row="2" Width="200" Height="50"
+                 FontSize="15" TextAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Label Grid.Column="0" Grid.Row="3" Content="Ocena"
+               FontSize="20" HorizontalAlignment="Center"/>
+        <TextBox x:Name="ocena" Grid.Row="3" Width="200" Height="50" 
+                 FontSize="15" TextAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="dodaj" Grid.Column="0" Grid.Row="4" Width="200" Height="60"
+                FontSize="20" Content="Dodaj" Click="dodaj_Click"/>
+
+        <TextBox x:Name="wyb_id" Grid.Column="0" Grid.Row="5" Width="200" VerticalAlignment="Top"
+                 FontSize="15" Height="30" Margin="10" TextAlignment="Center"/>
+        <Button x:Name="wyb_jeden" Grid.Column="0" Grid.Row="5" Width="200" VerticalAlignment="Bottom"
+                FontSize="20" Height="40" Content="Wybierz jeden" Margin="10" Click="wyb_jeden_Click"/>
+
+        <Label Grid.Column="1" Grid.Row="5" Content="Przedmiot" FontSize="15"
+               Margin="170 0"/>
+        <TextBox x:Name="prz_nazwa" Grid.Column="1" Grid.Row="5" Width="200"
+                 Height="50" VerticalAlignment="Center" HorizontalAlignment="Left"
+                 Margin="100 0" FontSize="15" TextAlignment="Center"
+                 VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="prz_ocena" Grid.Column="1" Grid.Row="5" Width="50"
+                 Height="50" VerticalAlignment="Center" HorizontalAlignment="Right"
+                 Margin="130 0" FontSize="15" TextAlignment="Center"
+                 VerticalContentAlignment="Center" IsEnabled="False"/>
+
+        <DataGrid x:Name="data_grid" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"
+                  Margin="40"/>
+
+        <Label Grid.Column="1" Grid.Row="6" Content="Średnia" FontSize="20"
+               HorizontalAlignment="Center"/>
+        <TextBox x:Name="txt_srednia" Grid.Column="1" Grid.Row="6" FontSize="15"
+                 Width="70" Height="50" HorizontalAlignment="Center" TextAlignment="Center"
+                 VerticalContentAlignment="Center" IsEnabled="False"/>
+
+        <Button x:Name="licz_srednia" Grid.Column="0" Grid.Row="6" FontSize="20"
+                Width="200" Height="60" HorizontalAlignment="Center"
+                Content="Licz średnią" Click="licz_srednia_Click"/>
+    </Grid>
+</Window>
